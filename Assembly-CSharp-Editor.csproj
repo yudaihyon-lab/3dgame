@@ -36,6 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
+     <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
      <Compile Include="Assets\LowPolyWater_Pack\Scripts\Editor\GeneratePlane.cs" />
      <Compile Include="Assets\NatureStarterKit2\Editor\ImageEffects\AntialiasingEditor.cs" />
      <Compile Include="Assets\NatureStarterKit2\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
@@ -628,6 +632,14 @@
       <Project>{3bfe6706-ef09-4efa-e4bc-0acb8d583b50}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="UniHumanoid.csproj">
+      <Project>{e6472071-f35e-8fa8-1a27-ca85136cc5e4}</Project>
+      <Name>UniHumanoid</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniGLTF.csproj">
+      <Project>{3e68c352-43ea-5a77-5ebd-b5c1dcb31e73}</Project>
+      <Name>UniGLTF</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{2d0eaff4-5c3b-d39a-fce5-851a23f41b1b}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -640,17 +652,41 @@
       <Project>{0ad0a118-22a0-6e2e-0fb8-a1b3cf3f618c}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
+    <ProjectReference Include="MToon.Editor.csproj">
+      <Project>{7c332739-4ce7-83e4-98ab-1ed0ce0597b6}</Project>
+      <Name>MToon.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
       <Project>{e4838acd-b124-5b64-db63-ec0eb9938305}</Project>
       <Name>Unity.CollabProxy.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniHumanoid.Editor.csproj">
+      <Project>{eb2e527d-aa8e-b377-337a-52f95d008cf1}</Project>
+      <Name>UniHumanoid.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{b51af508-2f54-8cf4-b5c3-e9f6a498547e}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="VRM.csproj">
+      <Project>{4dedc7e2-1ca6-efb7-de5b-195eb09ee193}</Project>
+      <Name>VRM</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniGLTF.Editor.csproj">
+      <Project>{1acd2d32-4223-e6ae-c606-e5d591fd8c91}</Project>
+      <Name>UniGLTF.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniVRM.Editor.csproj">
+      <Project>{5b85a92b-9b0c-0a46-5d59-c15efa3cb08d}</Project>
+      <Name>UniVRM.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{52ed0839-9009-4ccd-76a4-db9b9e12a9b8}</Project>
       <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="MToon.csproj">
+      <Project>{c659ff63-8113-2a36-e6de-71075c8c5087}</Project>
+      <Name>MToon</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{59c7002d-f887-61b7-0af7-6ee2f70ef0be}</Project>

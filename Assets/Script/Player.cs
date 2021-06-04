@@ -5,47 +5,32 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    //速さ
-
-    public float speed = 3f;
-
-    //方向転換スピード
-
-    public float rotateSpeed = 200f;
-
-    public Rigidbody rigid;
-    private Animator animator;
-
+[SerializeField] VariableJoystick m_VariableJoystick;
+    [SerializeField] Animator m_Animator;
+    [SerializeField] float m_Speed  = 1;
+    private CharacterController m_Controller;
+    private Vector3 m_Direction;
+    
     void Start()
-
     {
-
-        rigid = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
-
+        m_Controller = GetComponent<CharacterController>();
     }
-
+    
     void Update()
     {
-        animator.SetFloat("walk", Input.GetAxis("Vertical"));
-        // animator.SetFloat("walk", Input.GetAxis("Horizontal"));
-    }
-        void FixedUpdate()
 
+        if(m_Direction != new Vector3(0, 0, 0))
+        {
+            transform.localRotation = Quaternion.LookRotation(m_Direction);
+        }
+        m_Animator.SetFloat("isMoving", Mathf.Max(Mathf.Abs(m_Direction.x), Mathf.Abs(m_Direction.z)));
+
+        m_Controller.Move(m_Direction * m_Speed * Time.deltaTime);
+    }
+
+    public void FixedUpdate ()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        Vector3 velocity = new Vector3(0, 0, v);
-
-        // キャラクターのローカル空間での方向に変換
-
-        velocity = transform.TransformDirection(velocity);
-
-        //この間に移動処理
-        // キャラクターの回転
-
-        transform.Rotate(0, h * rotateSpeed * Time.fixedDeltaTime, 0);
-        rigid.MovePosition(transform.position+velocity*speed*Time.deltaTime);
+        m_Direction = Vector3.forward * m_VariableJoystick.Vertical + Vector3.right * m_VariableJoystick.Horizontal;
     }
+}
 }
