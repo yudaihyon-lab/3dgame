@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 1923991574350148585}
   - component: {fileID: 5323217711400947828}
   - component: {fileID: 1120490134843547316}
+  - component: {fileID: -4194915568256622861}
   - component: {fileID: 8842629721072957299}
   m_Layer: 0
   m_Name: test
@@ -304,7 +305,7 @@ Animator:
   m_GameObject: {fileID: 412782619754822165}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 93ab918eff519de47a7fdc3d330876c9, type: 2}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 737307ecefffe284b8873d35427429f5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -365,6 +366,21 @@ MonoBehaviour:
   Head: {fileID: 0}
   m_yaw: 0
   m_pitch: 0
+--- !u!114 &-4194915568256622861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412782619754822165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bcc865a81bf6d84e8e36e56ad9a4151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  rotateSpeed: 200
+  rigid: {fileID: 0}
 --- !u!114 &8842629721072957299
 MonoBehaviour:
   m_ObjectHideFlags: 0
