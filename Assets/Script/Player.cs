@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         animator.SetFloat("walk", Input.GetAxis("Vertical"));
-        animator.SetFloat("LateralSpeed", Input.GetAxis("Horizontal"));
+        // animator.SetFloat("walk", Input.GetAxis("Horizontal"));
     }
         void FixedUpdate()
 
